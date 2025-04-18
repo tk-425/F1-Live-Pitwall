@@ -27,16 +27,19 @@ export default function Header() {
         <div className='flex flex-row items-center text-center font-bold text-xl'>
           {sessionToDisplay && (
             <>
-              <Image
-                src={sessionToDisplay.flag}
-                width={70}
-                height={70}
-                className={`${flagIconFit}`}
-                alt='Race Flag'
-              />
-              <span className='mx-2'>
-                {sessionToDisplay.date.getUTCFullYear()}
-              </span>
+              <div className='hidden md:flex items-center'>
+                <Image
+                  src={sessionToDisplay.flag}
+                  width={70}
+                  height={70}
+                  className={`${flagIconFit}`}
+                  alt='Race Flag'
+                />
+                <span className='mx-2'>
+                  {sessionToDisplay.date.getUTCFullYear()}
+                </span>
+              </div>
+
               <span>{sessionToDisplay.raceName}</span>
             </>
           )}
