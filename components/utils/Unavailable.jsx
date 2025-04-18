@@ -29,10 +29,10 @@ export default function Unavailable({ message }) {
       const seconds = Math.floor((diff / 1000) % 60);
 
       setCountDown(
-        `D-${days}:${String(hours).padStart(2, '0')}:${String(minutes).padStart(
+        `D - ${days} : ${String(hours).padStart(2, '0')} : ${String(minutes).padStart(
           2,
           '0'
-        )}:${String(seconds).padStart(2, '0')}`
+        )} : ${String(seconds).padStart(2, '0')}`
       );
     };
 
