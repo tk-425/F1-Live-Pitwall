@@ -1,4 +1,6 @@
-export const pageStyle = 'flex flex-col items-center justify-center';
+export const pageStyle = 'flex flex-col items-center justify-center min-h-screen';
+
+export const contentStyle = 'flex-1 mt-6 mb-4';
 
 export const white = '#F2F0EF';
 

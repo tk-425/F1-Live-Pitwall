@@ -35,7 +35,7 @@ export default function Home() {
           activeView={activeView}
           setActiveView={setActiveView}
         />
-        <>{renderView()}</>
+        <div className='flex-1'>{renderView()}</div>
         <Footer />
       </div>
     </WebSocketProvider>
