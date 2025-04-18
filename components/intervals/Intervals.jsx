@@ -7,11 +7,25 @@ import { constructorIcons } from '@/info/utils/constructorIcons';
 import { teamIconFit } from '@/style/style';
 import Image from 'next/image';
 import { formatGap, formatInterval } from '../../utils/util_interval';
+import { useEffect, useState } from 'react';
+import { Loading } from '../utils/Loading';
+import { isValidArray } from '@/utils/dataUtils';
 
 export default function Intervals() {
   const { intervals } = useWebSocketContext();
+  const [loading, setLoading] = useState(true);
 
-  if (!Array.isArray(intervals) || intervals.length === 0) {
+  useEffect(() => {
+    if (isValidArray(intervals)) {
+      setLoading(false);
+    }
+  }, [intervals]);
+
+  if (loading) {
+    return <Loading type={ActiveViewType.INTERVALS} />;
+  }
+
+  if (!isValidArray(intervals)) {
     return <Unavailable message={ActiveViewType.INTERVALS} />;
   }
 

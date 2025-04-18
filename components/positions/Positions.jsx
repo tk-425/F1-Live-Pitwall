@@ -3,11 +3,25 @@ import Unavailable from '../utils/Unavailable';
 import { ActiveViewType } from '@/utils/activeViewType';
 import Position1stRow from './Position1stRow';
 import Position2ndRow from './Position2ndRow';
+import { useEffect, useState } from 'react';
+import { isValidArray } from '@/utils/dataUtils';
+import { Loading } from '../utils/Loading';
 
 export default function Positions() {
   const { positions } = useWebSocketContext();
+  const [loading, setLoading] = useState(true);
 
-  if (!Array.isArray(positions) || positions.length === 0) {
+  useEffect(() => {
+    if (isValidArray(positions)) {
+      setLoading(false);
+    }
+  }, [positions]);
+
+   if (loading) {
+      return <Loading type={ActiveViewType.POSITIONS} />;
+    }
+
+  if (!isValidArray(positions)) {
     return <Unavailable message={ActiveViewType.POSITIONS} />;
   }
 
@@ -28,9 +42,7 @@ export default function Positions() {
           />
 
           {/* Pit number & Current tire compound */}
-          <Position2ndRow
-            position={position}
-          />
+          <Position2ndRow position={position} />
         </div>
       ))}
     </div>
