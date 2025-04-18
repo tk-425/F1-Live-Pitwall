@@ -12,14 +12,12 @@ export default function Positions() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (isValidArray(positions)) {
-      setLoading(false);
-    }
+    setLoading(false);
   }, [positions]);
 
-   if (loading) {
-      return <Loading type={ActiveViewType.POSITIONS} />;
-    }
+  if (loading) {
+    return <Loading />;
+  }
 
   if (!isValidArray(positions)) {
     return <Unavailable message={ActiveViewType.POSITIONS} />;

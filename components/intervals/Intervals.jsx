@@ -16,13 +16,11 @@ export default function Intervals() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (isValidArray(intervals)) {
-      setLoading(false);
-    }
+    setLoading(false);
   }, [intervals]);
 
   if (loading) {
-    return <Loading type={ActiveViewType.INTERVALS} />;
+    return <Loading />;
   }
 
   if (!isValidArray(intervals)) {

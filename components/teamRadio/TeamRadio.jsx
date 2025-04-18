@@ -16,13 +16,11 @@ export default function TeamRadioPlayer() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (isValidArray(teamRadio)) {
-      setLoading(false);
-    }
+    setLoading(false);
   }, [teamRadio]);
 
   if (loading) {
-    return <Loading type={ActiveViewType.TEAM_RADIO} />;
+    return <Loading />;
   }
 
   if (!isValidArray(teamRadio)) {
