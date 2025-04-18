@@ -6,12 +6,26 @@ import { constructorIcons } from '@/info/utils/constructorIcons';
 import { teamIconFit } from '@/style/style';
 import Unavailable from '../utils/Unavailable';
 import { ActiveViewType } from '@/utils/activeViewType';
+import { useEffect, useState } from 'react';
+import { isValidArray } from '@/utils/dataUtils';
+import { Loading } from '../utils/Loading';
 
 export default function TeamRadioPlayer() {
   const { teamRadio } = useWebSocketContext();
   const teamRadioByConstructor = combineTeamRadiosByConstructor(teamRadio);
+  const [loading, setLoading] = useState(true);
 
-  if (!Array.isArray(teamRadio) || teamRadio.length === 0) {
+  useEffect(() => {
+    if (isValidArray(teamRadio)) {
+      setLoading(false);
+    }
+  }, [teamRadio]);
+
+  if (loading) {
+    return <Loading type={ActiveViewType.TEAM_RADIO} />;
+  }
+
+  if (!isValidArray(teamRadio)) {
     return <Unavailable message={ActiveViewType.TEAM_RADIO} />;
   }
 
