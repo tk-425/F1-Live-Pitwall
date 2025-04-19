@@ -10,6 +10,7 @@ import { formatGap, formatInterval } from '../../utils/util_interval';
 import { useEffect, useState } from 'react';
 import { Loading } from '../utils/Loading';
 import { isValidArray } from '@/utils/dataUtils';
+import PositionNumberIcon from '../icons/position/PositionNumberIcon';
 
 export default function Intervals() {
   const { intervals } = useWebSocketContext();
@@ -42,9 +43,10 @@ export default function Intervals() {
                 className='flex items-center text-sm font-mono mx-6'
               >
                 {/* Position */}
-                <span className='inline-block w-6 text-right pr-1 font-bold italic'>
+                {/* <span className='inline-block w-6 text-right pr-1 font-bold italic'>
                   {driver.position}.
-                </span>
+                </span> */}
+                <PositionNumberIcon position={driver.position} />
 
                 <Image
                   src={

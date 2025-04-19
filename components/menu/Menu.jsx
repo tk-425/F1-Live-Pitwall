@@ -1,8 +1,8 @@
 import { ActiveViewType } from '@/utils/activeViewType';
 
 export default function Menu({ activeView, setActiveView }) {
-  const intervals = ActiveViewType.INTERVALS;
   const positions = ActiveViewType.POSITIONS;
+  const intervals = ActiveViewType.INTERVALS;
   const teamRadio = ActiveViewType.TEAM_RADIO;
 
   return (
