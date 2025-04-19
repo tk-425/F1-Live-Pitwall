@@ -33,14 +33,14 @@ export default function Intervals() {
       {intervals.map((group, groupIndex) => (
         <div
           key={groupIndex}
-          className='mb-6'
+          className='mb-6 px-2'
         >
           <div className='font-semibold m-2'>Group {groupIndex + 1}</div>
           <div className='space-y-4 mb-2'>
             {group.map((driver, index) => (
               <div
                 key={index}
-                className='flex items-center text-sm font-mono mx-6'
+                className='flex items-center justify-center text-sm font-mono mx-6'
               >
                 {/* Position */}
                 {/* <span className='inline-block w-6 text-right pr-1 font-bold italic'>
@@ -68,18 +68,22 @@ export default function Intervals() {
                 />
 
                 {/* Interval */}
-                <span className='ml-4 mr-2 font-bold'>Interval:</span>
+                <div className='flex flex-row'>
+                  <span className='ml-4 mr-2 font-bold'>Interval:</span>
 
-                <span className='mr-2 w-[5ch] text-right inline-block'>
-                  {formatInterval(driver.interval, driver.gap_to_leader)}
-                </span>
+                  <span className='mr-2 w-[5ch] text-right inline-block'>
+                    {formatInterval(driver.interval, driver.gap_to_leader)}
+                  </span>
+                </div>
 
                 {/* Gap */}
-                <span className='ml-4 mr-2 font-bold'>Gap:</span>
+                <div className='hidden md:block'>
+                  <span className='ml-4 mr-2 font-bold'>Gap:</span>
 
-                <span className='w-[6ch] text-right inline-block'>
-                  {formatGap(driver.gap_to_leader)}
-                </span>
+                  <span className='w-[6ch] text-right inline-block'>
+                    {formatGap(driver.gap_to_leader)}
+                  </span>
+                </div>
               </div>
             ))}
           </div>

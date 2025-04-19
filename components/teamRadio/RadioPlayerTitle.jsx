@@ -18,13 +18,14 @@ export default function RadioPlayerTitle({
         teamColor={teamColor}
       />
 
-      <span className='mx-2 text-lg'>{currentTrack}</span>
+      <span className='mx-2 text-base md:text-lg'>{currentTrack}</span>
 
-      <span className='mx-2 text-xs text-gray-600 relative'>
+      <span
+        className={`mx-2 text-xs md:text-sm px-2 py-1 rounded transition-colors duration-200 ${
+          showDot ? 'text-red-500' : 'text-gray-600'
+        }`}
+      >
         {trackCount} Team Radio
-        {showDot && (
-          <span className='absolute -top-0.5 -right-2 w-1 h-1 bg-red-500 rounded-full animate-ping' />
-        )}
       </span>
     </div>
   );

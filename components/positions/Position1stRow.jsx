@@ -11,10 +11,9 @@ export default function Position1stRow({ position, startIndex, index }) {
   const { allIntervals } = useWebSocketContext();
 
   return (
-    <div className='flex items-center text-sm mx-2'>
+    <div className='flex items-center text-sm mx-2 px-4'>
       <PositionNumberIcon
         position={startIndex + index + 1}
-        // className='w-10 h-10'
       />
 
       <Image
@@ -33,7 +32,7 @@ export default function Position1stRow({ position, startIndex, index }) {
         className='ml-2'
       />
 
-      <div className='ml-4'>
+      <div className='ml-4 hidden md:block'>
         <span className='font-bold'>Interval:</span>
         <span className='ml-2'>
           {getInterval(allIntervals, position.driver_number)}
@@ -42,4 +41,3 @@ export default function Position1stRow({ position, startIndex, index }) {
     </div>
   );
 }
-
