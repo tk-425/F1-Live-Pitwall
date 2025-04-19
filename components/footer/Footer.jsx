@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className='my-4'>
+    <div className='my-4 px-4'>
       <div className='text-center mt-2 text-xs/4 text-gray-500'>
         <p>
           This project/website is unofficial and is not associated in any way
