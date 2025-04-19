@@ -5,7 +5,13 @@ export default function Footer() {
     <div className='px-4 mb-4'>
       <div className='text-center mt-2 text-xs/4 text-gray-500'>
         <p className='mb-3'>
-          <Link className='text-blue-600 mr-1' href='https://github.com/tk-425/F1-Live-Pitwall-WebSocket'>
+          <Link
+            className='text-blue-600 mr-1'
+            href='https://github.com/tk-425/F1-Live-Pitwall-WebSocket'
+            rel='noopener noreferrer'
+          
+            target='_blank'
+          >
             Github
           </Link>
           Version: 0.0.4
