@@ -12,15 +12,15 @@ import Positions from '@/components/positions/Positions';
 import Footer from '@/components/footer/Footer';
 
 export default function Home() {
-  const [activeView, setActiveView] = useState(ActiveViewType.INTERVALS);
+  const [activeView, setActiveView] = useState(ActiveViewType.POSITIONS);
 
   const renderView = () => {
     switch (activeView) {
-      case ActiveViewType.INTERVALS:
-        return <Intervals />;
-
       case ActiveViewType.POSITIONS:
         return <Positions />;
+
+      case ActiveViewType.INTERVALS:
+        return <Intervals />;
 
       case ActiveViewType.TEAM_RADIO:
         return <TeamRadioPlayer />;

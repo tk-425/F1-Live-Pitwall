@@ -13,7 +13,7 @@ export default function Position2ndRow({ position }) {
   const lastIndex = driverStints.length - 1;
 
   return (
-    <div className='ml-12 my-2 flex flex-row items-center'>
+    <div className='ml-15 my-2 flex flex-row items-center'>
       {/* <div>
         <span className='font-bold'>Pit:</span>
         <span className='ml-2'>

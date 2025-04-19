@@ -5,15 +5,17 @@ import { constructorIcons } from '@/info/utils/constructorIcons';
 import { teamIconFit } from '@/style/style';
 import { useWebSocketContext } from '@/context/WebSocketContext';
 import { getInterval } from '@/utils/util_interval';
+import PositionNumberIcon from '../icons/position/PositionNumberIcon';
 
 export default function Position1stRow({ position, startIndex, index }) {
   const { allIntervals } = useWebSocketContext();
 
   return (
     <div className='flex items-center text-sm mx-2'>
-      <div className='inline-block w-[3ch] text-right pr-1 font-bold italic'>
-        {startIndex + index + 1}.
-      </div>
+      <PositionNumberIcon
+        position={startIndex + index + 1}
+        // className='w-10 h-10'
+      />
 
       <Image
         src={constructorIcons[drivers[position.driver_number].constructor]}
@@ -40,3 +42,4 @@ export default function Position1stRow({ position, startIndex, index }) {
     </div>
   );
 }
+
