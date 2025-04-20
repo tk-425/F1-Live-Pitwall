@@ -21,9 +21,9 @@ export default function RadioPlayerTitle({
       <span className='mx-2 text-base md:text-lg'>{currentTrack}</span>
 
       <span
-        className={`mx-2 text-xs md:text-sm px-2 py-1 rounded transition-colors duration-100 ${
-          showDot ? 'text-red-500' : 'text-gray-600'
-        }`}
+        className={`mx-2 text-xs md:text-sm px-2 py-1 rounded transition-colors duration-100
+          ${showDot ? 'animate-pulse text-red-500' : 'text-gray-600'}
+        `}
       >
         {trackCount} Team Radio
       </span>
