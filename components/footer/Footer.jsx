@@ -1,3 +1,4 @@
+import { currentVersion } from '@/utils/currentYearAndVersion';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -9,12 +10,11 @@ export default function Footer() {
             className='text-blue-600 mr-1'
             href='https://github.com/tk-425/F1-Live-Pitwall-WebSocket'
             rel='noopener noreferrer'
-          
             target='_blank'
           >
             Github
           </Link>
-          Version: 0.0.4
+          Version: {currentVersion}
         </p>
         <p>
           This project/website is unofficial and is not associated in any way

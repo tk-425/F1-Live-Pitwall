@@ -1,6 +1,6 @@
 import { countryFlags } from './info_countryFlags.js';
 import { constructors } from './info_constructors.js';
-import { currentYear } from '@/utils/currentYear.js';
+import { currentYear } from '@/utils/currentYearAndVersion.js';
 import { teamColor } from '@/style/teamColors.js';
 
 export const drivers = {

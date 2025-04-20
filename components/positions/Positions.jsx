@@ -54,7 +54,7 @@ export default function Positions() {
   );
 
   return (
-    <div className='mt-6 mb-4 flex justify-center gap-8'>
+    <div className='mt-6 mb-4 flex justify-center gap-0 md:gap-8'>
       {renderColumn(leftColumn, 0)}
       {renderColumn(rightColumn, 10)}
     </div>
