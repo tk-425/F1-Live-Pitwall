@@ -19,9 +19,16 @@ export default function Positions() {
     return <Loading />;
   }
 
+  console.log('POSITION', positions);
+
   if (!isValidArray(positions)) {
     return <Unavailable message={ActiveViewType.POSITIONS} />;
   }
+
+  // if (!positions || positions.length === 0) {
+  //   return <Unavailable message={ActiveViewType.POSITIONS} />;
+  // }
+
 
   const leftColumn = positions.slice(0, 10);
   const rightColumn = positions.slice(10, 20);
