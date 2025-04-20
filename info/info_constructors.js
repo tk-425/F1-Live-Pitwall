@@ -1,4 +1,4 @@
-import { currentYear } from '@/utils/currentYear';
+import { currentYear } from '@/utils/currentYearAndVersion';
 
 export const constructors = {
   Alpine: {
