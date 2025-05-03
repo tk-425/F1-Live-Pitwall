@@ -17,21 +17,24 @@ export function getInterval(allIntervals, driverNumber) {
 }
 
 export function formatInterval(interval, gapToLeader) {
-  if (interval === null && gapToLeader === 0) {
+  if (interval === 0 && (gapToLeader === 0 || gapToLeader === null)) {
     return 'Leader';
   }
-
-  if (typeof interval === 'number') {
+  if (typeof interval === 'number' && interval > 0) {
     return interval.toFixed(3);
   }
-
   return 'N/A';
 }
 
-export function formatGap(gapToLeader) {
-  if (gapToLeader === null || gapToLeader === 0) {
+export function formatGap(gapToLeader, interval) {
+  if (interval === 0 && (gapToLeader === 0 || gapToLeader === null)) {
     return 'Leader';
   }
-
-  return gapToLeader.toFixed(3);
+  if (gapToLeader === null && typeof interval === 'number' && interval > 0) {
+    return 'N/A';
+  }
+  if (typeof gapToLeader === 'number') {
+    return gapToLeader.toFixed(3);
+  }
+  return 'N/A';
 }
