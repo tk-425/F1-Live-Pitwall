@@ -5,7 +5,7 @@ export function getInterval(allIntervals, driverNumber) {
     return 'N/A';
   }
 
-  if (entry.interval === null && entry.gap_to_leader === 0) {
+  if ((entry.interval === null || entry.interval === 0) && entry.gap_to_leader === 0) {
     return 'Leader';
   }
 
