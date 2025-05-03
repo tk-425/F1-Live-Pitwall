@@ -1,36 +1,15 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# F1 Live Pitwall
 
-## Getting Started
+Real‑time Formula 1 telemetry, intervals, positions, stints and team radio in a lightweight WebSocket‑powered dashboard.
 
-First, run the development server:
+Live Demo: [https://f1-live-pitwall.onrender.com](https://f1-live-pitwall.onrender.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+F1 Live Pitwall aggregates live racing data from the OpenF1 API and broadcasts it via a WebSocket server. A Next.js frontend consumes that stream to render up‑to‑the‑second intervals, positions, stint changes, and team radio audio feeds.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Live WebSocket feed of driver intervals, positions, stints and team radio
+- Grouping of cars by interval gaps (≤ 3s) for quick pitwall insight
+- Historical stint tracking with compound and tyre‑age updates
