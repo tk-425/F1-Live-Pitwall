@@ -6,7 +6,7 @@ import { ActiveViewType } from '@/utils/activeViewType';
 import { constructorIcons } from '@/info/utils/constructorIcons';
 import { teamIconFit } from '@/style/style';
 import Image from 'next/image';
-import { formatGap, formatInterval } from '../../utils/util_interval';
+import { formatInterval, formatGap } from '../../utils/util_interval';
 import { useEffect, useState } from 'react';
 import { Loading } from '../utils/Loading';
 import { isValidArray } from '@/utils/dataUtils';
@@ -31,10 +31,7 @@ export default function Intervals() {
   return (
     <div className='mt-6 mb-4'>
       {intervals.map((group, groupIndex) => (
-        <div
-          key={groupIndex}
-          className='mb-6 px-2'
-        >
+        <div key={groupIndex} className='mb-6 px-2'>
           <div className='font-semibold m-2'>Group {groupIndex + 1}</div>
           <div className='space-y-4 mb-2'>
             {group.map((driver, index) => (
@@ -43,19 +40,15 @@ export default function Intervals() {
                 className='flex items-center justify-center text-sm font-mono mx-6'
               >
                 {/* Position */}
-                {/* <span className='inline-block w-6 text-right pr-1 font-bold italic'>
-                  {driver.position}.
-                </span> */}
                 <PositionNumberIcon position={driver.position} />
 
+                {/* Constructor Icon */}
                 <Image
-                  src={
-                    constructorIcons[drivers[driver.driver_number].constructor]
-                  }
+                  src={constructorIcons[drivers[driver.driver_number].constructor]}
                   width={26}
                   height={26}
                   className={`${teamIconFit} mx-4`}
-                  alt={`drivers[driver.driver_number].constructor || 'constructor-logo`}
+                  alt={drivers[driver.driver_number].constructor || 'constructor-logo'}
                 />
 
                 {/* Driver Badge */}
@@ -67,21 +60,19 @@ export default function Intervals() {
                   height={32}
                 />
 
-                {/* Interval */}
+                {/* Interval Display */}
                 <div className='flex flex-row'>
                   <span className='ml-4 mr-2 font-bold'>Interval:</span>
-
                   <span className='mr-2 w-[5ch] text-right inline-block'>
                     {formatInterval(driver.interval, driver.gap_to_leader)}
                   </span>
                 </div>
 
-                {/* Gap */}
+                {/* Gap Display */}
                 <div className='hidden md:block'>
                   <span className='ml-4 mr-2 font-bold'>Gap:</span>
-
                   <span className='w-[6ch] text-right inline-block'>
-                    {formatGap(driver.gap_to_leader)}
+                    {formatGap(driver.gap_to_leader, driver.interval)}
                   </span>
                 </div>
               </div>
