@@ -18,6 +18,18 @@ export const drivers = {
     constructor: constructors.Alpine.name,
     teamColor: teamColor.Alpine,
   },
+  43: {
+    initial: 'COL',
+    flag: countryFlags.ARG,
+    headshot: `https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/F/FRACOL01_Franco_Colapinto/fracol01.png`,
+    halfBody: `https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1320/fom-website/drivers/${currentYear}Drivers/colapinto`,
+    helmet: ``,
+    numberIcon: `https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/2018-redesign-assets/drivers/number-logos/FRACOL01.png`,
+    teamLogo: constructors.Alpine.icon,
+    constructor: constructors.Alpine.name,
+    teamColor: teamColor.Alpine,
+  },
+  // Alpine Reserve Driver
   7: {
     initial: 'DOO',
     flag: countryFlags.AUS,
@@ -27,18 +39,6 @@ export const drivers = {
     numberIcon:
       'https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/2018-redesign-assets/drivers/number-logos/JACDOO01.png',
     helmet: `https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets${currentYear}/doohan`,
-    teamLogo: constructors.Alpine.icon,
-    constructor: constructors.Alpine.name,
-    teamColor: teamColor.Alpine,
-  },
-  // Alpine Reserve Driver
-  43: {
-    initial: 'COL',
-    flag: countryFlags.ARG,
-    headshot: '',
-    halfBody: ``,
-    numberIcon: '',
-    helmet: ``,
     teamLogo: constructors.Alpine.icon,
     constructor: constructors.Alpine.name,
     teamColor: teamColor.Alpine,
