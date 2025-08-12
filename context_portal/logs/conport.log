@@ -1,0 +1,9 @@
+2025-08-11 23:40:18,212 - INFO - context_portal_mcp.main - File logging configured to: /Users/terrykang/Documents/Programming/+Projects/F1-Live-Pitwall-Frontend/context_portal/./logs/conport.log
+2025-08-11 23:40:18,212 - INFO - context_portal_mcp.main - Parsed CLI args: Namespace(host='127.0.0.1', port=8000, workspace_id='/Users/terrykang/Documents/Programming/+Projects/F1-Live-Pitwall-Frontend', mode='stdio', log_file='./logs/conport.log', log_level='INFO')
+2025-08-11 23:40:18,212 - INFO - context_portal_mcp.main - Starting ConPort in STDIO mode using FastMCP for initial CLI arg workspace_id: /Users/terrykang/Documents/Programming/+Projects/F1-Live-Pitwall-Frontend
+2025-08-11 23:40:18,212 - INFO - context_portal_mcp.main - Pre-warming database connection for workspace: /Users/terrykang/Documents/Programming/+Projects/F1-Live-Pitwall-Frontend
+2025-08-11 23:40:18,213 - INFO - context_portal_mcp.db.database - Alembic.ini not found. Creating at /Users/terrykang/Documents/Programming/+Projects/F1-Live-Pitwall-Frontend/context_portal/alembic.ini
+2025-08-11 23:40:18,213 - INFO - context_portal_mcp.db.database - Alembic env.py not found. Creating at /Users/terrykang/Documents/Programming/+Projects/F1-Live-Pitwall-Frontend/context_portal/alembic/env.py
+2025-08-11 23:40:18,214 - INFO - context_portal_mcp.db.database - Initial schema not found. Creating at /Users/terrykang/Documents/Programming/+Projects/F1-Live-Pitwall-Frontend/context_portal/alembic/versions/2025_06_17_initial_schema.py
+2025-08-11 23:40:18,216 - INFO - context_portal_mcp.db.database - Alembic: Script directory /Users/terrykang/Documents/Programming/+Projects/F1-Live-Pitwall-Frontend/context_portal/alembic confirmed to exist by Python.
+2025-08-11 23:40:18,216 - INFO - context_portal_mcp.db.database - Running Alembic migrations for database: /Users/terrykang/Documents/Programming/+Projects/F1-Live-Pitwall-Frontend/context_portal/context.db

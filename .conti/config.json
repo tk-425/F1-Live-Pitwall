@@ -1,0 +1,47 @@
+{
+  "project_name": "f1-live-pitwall-frontend",
+  "project_path": "/Users/terrykang/Documents/Programming/+Projects/F1-Live-Pitwall-Frontend",
+  "port": 8923,
+  "created_at": "2025-08-12T00:36:55.969922",
+  "version": "0.1.0",
+  "technologies": [
+    "nodejs"
+  ],
+  "frameworks": [
+    "react",
+    "nextjs"
+  ],
+  "project_type": "fullstack",
+  "package_managers": [
+    "npm"
+  ],
+  "auto_shutdown_delay": 30,
+  "memory_settings": {
+    "max_conversations": 100,
+    "context_refresh_interval": 10,
+    "importance_threshold": 0.5,
+    "context_window": 4000
+  },
+  "project_context": {
+    "include_files": [
+      "*.md",
+      "README*",
+      "*.txt",
+      "*.js",
+      "*.ts",
+      "*.jsx",
+      "*.tsx",
+      "package.json"
+    ],
+    "exclude_patterns": [
+      "node_modules/",
+      ".git/",
+      "__pycache__/",
+      ".venv/",
+      "dist/",
+      "build/",
+      "target/",
+      ".conti/"
+    ]
+  }
+}
